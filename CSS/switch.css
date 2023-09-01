@@ -1,0 +1,89 @@
+/* Nintendo Switch Part */
+.switch-frame {
+    position: relative;
+    width: 100%;
+    
+}
+.switch-frame img {
+    width: 100%;
+    display: block;
+    
+}
+
+.switch img{
+    width: 100vw;
+    z-index: 2;
+    background: rgb(131,0,7);
+    background: linear-gradient(0deg, rgba(131,0,7,1) 0%, rgba(227,7,18,1) 100%);
+}
+
+/* 닌텐도 스위치 이미지를 가장 상단에 띄우기 위해 다른 이미지박스들의 z-index를 1로 줌 */
+.kb div{            
+    z-index: 1;
+    position: absolute;
+    /* opcity 0으로 설정하고 트랜지션 0.3초 */
+    opacity: 0;                 
+    transition: opacity 0.5s;   
+}
+.kb div.visible {
+    opacity: 1;
+}
+.kb-bg {
+    width: 51vw;
+    top: 13vw;
+    left: 24vw;
+}
+.kb-lor {
+    width: 9vw;
+    top: 14vw;
+    left: 56vw;
+}
+.kb-mahoroa {
+    width: 6vw;
+    top: 16vw;
+    left: 52.5vw;
+}
+.kb-mahoroa img {
+    transform: rotate(15deg);
+}
+.kb-metaknite {
+    width: 10vw;
+    top: 17vw;
+    left: 49.5vw;
+}
+.kb-metaknite img{
+    transform: rotate(15deg);
+}
+.kb-waddledee {
+    width: 8.7vw;
+    top: 24vw;
+    left: 50.5vw;
+}
+.kb-waddledee img {
+    transform: rotate(6.5deg);
+}
+.kb-dedede {
+    width: 12vw;
+    top: 16.5vw;
+    left: 61vw;
+}
+.kb-kirby {
+    width: 12vw;
+    top: 23.5vw;
+    left: 57vw;
+}
+.kb-kirby img {
+    transform: rotate(-5deg);
+}
+.kb-logo {
+    width: 20vw;
+    top: 17vw;
+    left: 28vw;
+}
+.kb-date {
+    width: 20vw;
+    top: 29vw;
+    left: 28vw;
+}
+
+
