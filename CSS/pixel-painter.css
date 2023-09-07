@@ -1,17 +1,35 @@
 .portfolio {
     width: 60vw;
-    height: 33.75vw ;
-    background-color: beige;
+    background-color: rgb(0, 0, 0);
     margin: 0 auto;
+    padding: 5px;
 }
+.pixel-title h2 {
+    color: white;
+    text-align: center;
+    margin: 10px;
+    margin-top: 5px;
+}
+
 .pixel-painter {
+    color: white;
     font-family: pixeboy;
 }
 
 .pixel-option div{
     display: flex;
     justify-content: center;
-
+}
+.option-buttons button{
+    color: white;
+    border: none;
+    background-color: rgb(101, 101, 101);
+    padding: 3px;
+    border-radius: 8px;
+}
+.pixel-container {
+    border: 2px solid white;
+    margin-top: 8px;
 }
 
 
