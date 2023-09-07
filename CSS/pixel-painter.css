@@ -1,0 +1,17 @@
+.portfolio {
+    width: 60vw;
+    height: 33.75vw ;
+    background-color: beige;
+    margin: 0 auto;
+}
+.pixel-painter {
+    font-family: pixeboy;
+}
+
+.pixel-option div{
+    display: flex;
+    justify-content: center;
+
+}
+
+
