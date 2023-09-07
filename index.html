@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="./CSS/pixel-painter.css">
 </head>
 <body>
-    <div id="scroll-value">
+    
+    <div id="scroll-value"> <!-- 스크롤 값 보여주기 -->
         0
     </div>
     <div class="portfolio pixel-painter">
@@ -17,13 +18,13 @@
         </div>
         <div class="pixel-option">
             <div class="option-slider">
-                <label for="width-range">Grid resolution</label>
-                <input id="resolution-range" type="range" min="4" max="24">
+                <label for="resolution-range">Grid resolution</label>
+                <input id="resolution-range" type="range" min="4" max="24" value="24">
                 <span id="resolution-value">00</span>
             </div>
             <div class="option-buttons">
-                <button>Clear</button>
-                <input type="color">
+                <button id="clear-btn">Clear</button>
+                <input id="color-input" type="color">
                 <button id="paint-btn">Paint</button>
                 <button id="erase-btn">Erase</button>
             </div>
