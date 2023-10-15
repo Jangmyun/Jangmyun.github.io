@@ -1,0 +1,65 @@
+#front-back {
+  font-family: "Druk-Wide-Medium";
+  padding: 20px;
+}
+#front-back .front {
+  transform: translateX(-100%);
+  animation: slideRight 1s 1.7s forwards;
+}
+#front-back .back {
+  transform: translateX(100%);
+  animation: slideLeft 1s 1.7s forwards;
+}
+#front-back .stack-container {
+  margin-top: 30px;
+}
+
+.slideUp-wrapper {
+  overflow: hidden;
+}
+
+.slideUp-wrapper * {
+  transform: translateY(200%);
+  animation: slideUp 1s 3s;
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}/*# sourceMappingURL=FrontBack.css.map */
