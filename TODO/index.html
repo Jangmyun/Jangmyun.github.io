@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <div id="content-wrapper" class="container flex-column">
+
+      <h1 class="title">To Do</h1>
+      <div id="input-wrapper" class="todo-wrapper container flex">
+        <input id="titleInput" type="text" placeholder="What is your task?" />
+        <button id="InputButton" class="todo-button"><img class="plus-button" src="./img/plus.svg" width="15px" draggable="false" alt=""></button>
+      </div>
+
+      <div class="container todo-list-container">
+        <ul class="todo-list">
+          <li class="todo-wrapper">
+            <div class="checkBox"><img class="check-mark" src="./img/checkmark_83735.svg" alt=""></div>
+            <div class="todo-title">Eat Chicken</div>
+            <div class="deleteBox"></div>
+          </li>
+          <li class="todo-wrapper">
+            <div class="checkBox"><img class="check-mark" src="./img/checkmark_83735.svg" alt=""></div>
+            <div class="todo-title">Buy a book</div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+   
+    
+    
+    <script src="script.js"></script>
+  </body>
+</html>
