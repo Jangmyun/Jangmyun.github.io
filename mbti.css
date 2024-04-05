@@ -1,19 +1,68 @@
-div {
-  box-sizing: border-box;
-  border: 1px solid black;
+@font-face {
+  font-family: "Maplestory";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "Maplestory";
+}
+
+#TITLE {
+  font-family: "Maplestory";
+  text-align: center;
+}
+#zigzag {
+  margin: auto;
+  display: block;
+  transform: rotate(90deg);
 }
 
 .buttonBox {
   display: flex;
+  justify-content: center;
   width: 100%;
 }
 
 .mbti-btn {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
 }
-
-.mbti-btn button {
+Objects that are of the class .mbti-btn button {
   width: 80%;
+  border: none;
+}
+
+.mbti-btn button:hover {
+  color: white;
+  background-color: rgb(89, 89, 89);
+}
+
+.checked {
+  color: white;
+  background-color: rgb(89, 89, 89);
+}
+
+input {
+  margin: auto;
+  text-align: center;
+  margin: 20px auto;
+  display: block;
+  font-size: large;
+  height: 1.5em;
+}
+input:focus {
+  border: 2px solid black;
+}
+
+h1 {
+  text-align: center;
+}
+
+.output {
+  text-align: center;
 }
