@@ -10,8 +10,19 @@
   font-family: "Maplestory";
 }
 
+h1 {
+  font-family: "Maplestory";
+  font-size: 40px;
+}
+
+p {
+  font-size: 20px;
+  text-align: center;
+}
+
 #TITLE {
   font-family: "Maplestory";
+  font-size: 50px;
   text-align: center;
 }
 #zigzag {
@@ -65,4 +76,32 @@ h1 {
 
 .output {
   text-align: center;
+}
+
+input {
+  font-size: 30px;
+  border-radius: 15px;
+  width: 300px;
+  height: 1.5em;
+}
+input:focus {
+  outline: none;
+}
+
+.l {
+  font-size: 50px;
+}
+
+.resultContainer {
+  margin-top: 50px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.resultBoxContainer {
+  width: 100%;
+  display: flex;
+}
+.resultBoxContainer .resultBox {
+  width: 50%;
 }
