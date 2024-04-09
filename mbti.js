@@ -1,64 +1,66 @@
 const inputNodes = document.querySelectorAll(".mbtiInput");
-const friendliness = ["mbti", "best", "good", "soso", "notbad", "bad"];
+const objKeys = ["best", "good", "soso", "notbad", "bad"];
+const friendlinessObj = {
+  best: ["best", 5],
+  good: ["good", 4],
+  soso: ["soso", 3],
+  notbad: ["notbad", 2],
+  bad: ["bad", 1],
+};
 let mbtiInputs = ["    ", "    "];
+
+const result = document.querySelector(".result");
+const resultDiscription = document.querySelector(".resultDiscription");
 
 Array.prototype.forEach.call(inputNodes, function (item, index) {
   console.log(item);
   item.addEventListener("input", (e) => {
     mbtiInputs[index] = item.value;
     console.log(mbtiInputs[index]);
+    let result = mbtiChecker(mbtiInputs[0], mbtiInputs[1]);
+    if (result != undefined) {
+      const resultArr = friendlinessObj[result];
+      result.innerHTML = resultArr[0];
+      resultDiscription.innerHTML = "❤️" * resultArr[1];
+    }
   });
 });
 
-mbtiObjArr = fetch("./mbtiData.json")
+let data;
+
+fetch("./mbtiData.json")
   .then(function (response) {
     return response.json();
   })
   .then(function (myJSON) {
     console.log(JSON.stringify(myJSON));
+    data = myJSON;
   });
 
-function mbtiChecker(mbti) {}
+const mbtiObjArr = data;
+console.log("\n");
+console.log(mbtiObjArr);
 
-// const container = document.querySelector(".container");
+function mbtiChecker(first, second) {
+  let output;
+  let firstMBTI;
+  let firstMBTIObj;
 
-// const input0 = document.querySelector(".input0");
+  for (const mbtiObj of data) {
+    if (mbtiObj["mbti"] == first) {
+      firstMBTI = mbtiObj["mbti"];
+      firstMBTIObj = mbtiObj;
+    }
+  }
+  console.log(firstMBTI);
 
-// const oppositeMbti = {
-//   e: "i",
-//   i: "e",
-//   s: "n",
-//   n: "s",
-//   t: "f",
-//   f: "t",
-//   j: "p",
-//   p: "j",
-// };
-
-// function makeButton(a) {
-//   for (let i = 0; i < a; i++) {
-//     container.innerHTML += `
-//     <div class="buttonBox" id="bb${i}">
-//       <div class="mbti-btn">
-//         <button class="ei selectBtn" id="e${i}" >E</button>
-//         <button class="ei selectBtn" id="i${i}">I</button>
-//       </div>
-//       <div class="mbti-btn">
-//         <button class="sn selectBtn" id="s${i}">S</button>
-//         <button class="sn selectBtn" id="n${i}">N</button>
-//       </div>
-//       <div class="mbti-btn">
-//         <button class="tf selectBtn" id="t${i}">T</button>
-//         <button class="tf selectBtn" id="f${i}">F</button>
-//       </div>
-//       <div class="mbti-btn">
-//         <button class="jp selectBtn" id="j${i}">J</button>
-//         <button class="jp selectBtn" id="p${i}">P</button>
-//       </div>
-//   </div>`;
-//   }
-// }
-// function addButtonEvent() {
-//   const selectBtn = document.querySelectorAll(".selectBtn");
-//   selectBtn.forEach((currentValue, index, listObj) => {});
-// }
+  for (const key of objKeys) {
+    for (let i = 0; i < firstMBTIObj[key].length; i++) {
+      if (firstMBTIObj[key][i] == second && second != undefined) {
+        output = key;
+      }
+    }
+  }
+  console.log(output);
+  return output;
+}
