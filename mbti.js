@@ -9,8 +9,8 @@ const friendlinessObj = {
 };
 let mbtiInputs = ["    ", "    "];
 
-const result = document.querySelector(".result");
-const resultDiscription = document.querySelector(".resultDiscription");
+const resultBox = document.querySelector(".result");
+const resultDescription = document.querySelector(".resultDescription");
 
 Array.prototype.forEach.call(inputNodes, function (item, index) {
   console.log(item);
@@ -18,10 +18,15 @@ Array.prototype.forEach.call(inputNodes, function (item, index) {
     mbtiInputs[index] = item.value;
     console.log(mbtiInputs[index]);
     let result = mbtiChecker(mbtiInputs[0], mbtiInputs[1]);
-    if (result != undefined) {
+    if (result != undefined && result !=null) {
       const resultArr = friendlinessObj[result];
-      result.innerHTML = resultArr[0];
-      resultDiscription.innerHTML = "❤️" * resultArr[1];
+      resultBox.innerHTML = resultArr[0];
+      
+      if( resultArr[1] == 0){
+        resultDescription.innerHTML = "💔";
+      } else{
+        resultDescription.innerHTML = Array(resultArr[1]+1).join("❤️");
+      }
     }
   });
 });

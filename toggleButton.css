@@ -1,0 +1,12 @@
+.buttonBox {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonBox button {
+  width: 70%;
+  height: 2em;
+  font-size: 20px;
+}
